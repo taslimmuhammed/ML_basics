@@ -17,7 +17,7 @@ def dense_loop(a_in, W,b):
         a_out[j] = g(z)
     return a_out
 def dense_vect(A_in,W,B): # vectors are represented in capital
-    Z = np.matmul(A_in,W)+B #matrix multiplication
+    Z = np.matmul(A_in.T,W)+B #matrix multiplication, A.T gives transpose of matrix
     A_out = g(Z)
     return A_out
 
