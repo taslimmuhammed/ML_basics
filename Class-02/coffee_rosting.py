@@ -38,7 +38,7 @@ model.compile(
 )#define loss function and set learning rate
 
 model.fit(
-    tf.constant(Xt),tf.constant(Yt),
+    Xt,Yt,
     epochs=10
 )
 
