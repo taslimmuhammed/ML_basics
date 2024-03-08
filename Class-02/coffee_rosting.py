@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import tensorflow as tf 
 from tensorflow.keras.layers import Dense, Input
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.losses import MeanSquaredError, BinaryCrossentropy
+from tensorflow.keras.losses import MeanSquaredError, binary_crossentropy
 from tensorflow.keras.activations import sigmoid
 tf.autograph.set_verbosity(0)
 # X[0] = temp, X[1] = time
@@ -33,12 +33,12 @@ model = Sequential(
 )
 model.summary() # params = total number of variables(both w and b)
 model.compile(
-    loss = BinaryCrossentropy,
-    optimizer = tf.keras.optimizers.Adam(learning_rate=0.01),
+    loss = binary_crossentropy,
+    optimizer = tf.keras.optimizers.Adam(learning_rate=0.01)
 )#define loss function and set learning rate
 
 model.fit(
-    Xt,Yt,
+    tf.constant(Xt),tf.constant(Yt),
     epochs=10
 )
 

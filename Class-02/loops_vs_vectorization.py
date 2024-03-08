@@ -5,7 +5,7 @@ x = np.array([200,17])
 W = np.array([
     [1,-3,5],
     [-2,4,-6] 
-    ]) #the w vector for a neuron exist in a column not row
+    ]) #the w vector for a neuron exist in a column not row i.e three neurons with 2 inputs
 b = np.array([-1,1,2])
 
 def dense_loop(a_in, W,b):

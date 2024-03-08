@@ -13,4 +13,4 @@ model = Sequantial([layer_1, layer_2])
 x = np.array([1,0,0,1])
 model.compile()
 model.fit(x,y)
-model.pre
+res = model.predit(x)
