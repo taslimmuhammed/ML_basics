@@ -41,10 +41,12 @@ original_img = plt.imread('bird_small.png')
 plt.imshow(original_img)
 
 def kMean_init_centroids(X,K):
+    #  Randomly select a pixel from the image as an initial centroid, randix is an array of pixels
     randidx = np.random.permutation(X.shape[0])
     centroids = X[randidx[:K]]
     return centroids
 #reshape to mx3, m is the shape of current matrix, and 3 is RGB
+print(original_img.shape)
 X_img = np.reshape(original_img, (original_img.shape[0] * original_img.shape[1], 3))
 
 K = 16
